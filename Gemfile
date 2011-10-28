@@ -11,7 +11,7 @@ gem 'pg', :group => :production
 require 'open-uri'
 require 'csv'
 
-require 'execjs'
+gem 'therubyracer-heroku', :group => :production
 
 # Gems used only for assets and not required
 # in production environments by default.
