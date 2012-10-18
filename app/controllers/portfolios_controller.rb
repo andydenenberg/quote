@@ -6,15 +6,16 @@ class PortfoliosController < ApplicationController
     @portfolios = Portfolio.all
     
     @portfolios.each do |stocks|
-        sym = stocks.symbol
-        url = "http://download.finance.yahoo.com/d/quotes.csv?s=#{sym}&f=l1&e=.csv"
-        csv = CSV.parse(open(url).read)
-        result = Array.new
-        #parse csv data
-        csv.each do |row|
-          result += row
-        end
-        stocks.lastquote = result[0]
+        stocks.lastquote = stocks.current_price
+#        sym = stocks.symbol
+#        url = "http://download.finance.yahoo.com/d/quotes.csv?s=#{sym}&f=l1&e=.csv"
+#        csv = CSV.parse(open(url).read)
+#        result = Array.new
+#        #parse csv data
+#        csv.each do |row|
+#          result += row
+#        end
+#        stocks.lastquote = result[0]
     end
 
 
