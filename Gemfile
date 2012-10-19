@@ -8,6 +8,10 @@ gem 'rails', '3.1.1'
 gem 'mysql2'
 gem 'sqlite3'
 
+group :development do
+  gem 'capistrano'
+end
+
 #gem 'sqlite3', :group => :development
 #gem 'pg', :group => :production
 
