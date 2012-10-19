@@ -1,4 +1,4 @@
-require 'bundler/capistrano'
+# require 'bundler/capistrano'
 
 set :application, "quote"
 set :repository,  "git@github.com:andydenenberg/quote.git"
